@@ -8,11 +8,13 @@ let vm = new Vue({
         postMessage: '',
         countries: []
     },
+
     created: function(){
         this.loadQuote();
         this.allUsers();
         this.votingResult();
     },
+    
     methods: {
         allUsers: function(){
             axios.get('classes/Users.php').then(function(response) {
